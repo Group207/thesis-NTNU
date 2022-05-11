@@ -18,20 +18,20 @@
 \tableofcontents
 \listoffigures
 \listoftables
-\lstlistoflistings
+%\listoflistings
 
 \printglossary[type=\acronymtype] % Print acronyms
 \printglossary                    % Print glossary
+\input{chapters/1-introduction.tex}
+\input{chapters/2-Theory.tex}
+\input{chapters/3-Main.tex}
+\input{chapters/4-EndChapters}
 
-\input{chapters/1-introduction}
-\input{chapters/2-usage.tex}
-\input{chapters/3-structure.tex}
-\input{chapters/4-conclusion.tex}
+
+
 
 \chapter*{\bibname}
 \printbibliography[heading=none]
-
-\input{chapters/papers.tex}
 
 \appendix
 \input{appendices/a-appendix.tex}

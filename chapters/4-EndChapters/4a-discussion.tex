@@ -1,0 +1,17 @@
+\section{Discussion}
+%Sum up tall the goals and to what degree they got achieved. Thees includes learning goals (dev and process), effect goals, resultgoals...
+
+%A section about alternatives, options and choices we made. 
+
+%Maybe a section summing up our experience with unreal as the choice of engine, are the expectations met, why, why not. A critical view on the game engine analysis.
+\subsection{Version Control System}
+Version control or source control, is the practice of tracking and managing changes to software code often within a development team\cite{what_is_version_control}.
+
+Before we started developing we had to chose what version control system we would use. On one side we have Perforce, often a standard choice for larger studios and is favored within game development due to its handling of large binary files. On the other side we have Git a standard choice for developers all around due to its many features for teams and how it supports multiple branches which helps with cooperation within a team. The biggest structural difference is that Perforce uses a centralized model unlike Git which uses a distributed decentralized model. Deploying a Perforce server is also necessary before you can use it, unlike Git which is ready to be used from a cloud service such as Github or Azure DevOps. 
+Throughout our bachelor program we have used Git as a version control system and collaborative tool to help us keep the code base consistent and maintained, and is one of the reasons for using it in this project as well. Git can also be hosted on the cloud through for example Github, which we also used in this project. Although Perforce would probably be a better choice for bigger projects and teams since it can handle bigger files more efficiently\cite{different_version_control_used_in_gamedev}.
+
+The biggest issue we faced with git was its single file size limit of 100MB, since Unreal Engine projects contain bigger files such as 3D models, textures and maps. We had a few instances were a map file containing the level scene were bigger than git`s allowed file size limit. As a fix we used the level layer tool in Unreal Engine to split the level file into multiple smaller map files. This temporary fixed the issue and we were no longer hitting the max file size limit of git, although this also made it possible for us to edit and work on the same level without having to overwrite each others changes, since we could just work on different level layers. This is due to the maps being binary files which git cant merge. You either have to pick the current one or the incoming file when merging, unlike cpp files which can be edited by multiple people and can be properly merged together after. 
+
+We also tried using git LFS at the beginning, although GitHub only provides a LFS storage capacity and bandwidth at 1GB which we quickly used up in one single commit. 
+
+Git has many cloud hosting services were you can create repositories in the cloud, such as Github, Gitlab, Bitbucket or Azure DevOps.

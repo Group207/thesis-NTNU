@@ -14,6 +14,7 @@
  [\ntnuthesisdate\space
    CC-BY CoPCSE at NTNU 2019]
 
+\ProvidesPackage{packages}[2020/09/15 Packages]
 
 %% CLASS OPTIONS
 
@@ -321,3 +322,40 @@
        \@starttoc{lol}%
        \endgroup%
        }%
+
+% Images
+\usepackage{wrapfig}    % Wrap text around images
+\usepackage{float}      % Force image location using "H"S
+
+
+
+% Tables
+\usepackage{tabularx} % using table view
+
+\usepackage{xcolor}
+
+\usepackage{diagbox}
+\usepackage{makecell}
+\RequirePackage{tabularray}     % Used when creating tables
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{changepage} % Test for tab
+\newenvironment{myenv}{\begin{adjustwidth}{1cm}{}}{\end{adjustwidth}}
+% NEW COMMANDS
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage{subcaption}
+
+\RequirePackage[framemethod=tikz]{mdframed}
+
+% --- Code ---
+\RequirePackage{minted} % Includes several programming languages and styles
+\usemintedstyle{vs}
+\setminted{fontsize=\footnotesize}
+\RequirePackage{environ}
+
+\newenvironment{code}
+{\VerbatimEnvironment
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!10,]
+\begin{minted}[linenos,tabsize=4,breaklines]{c++}}
+{\end{minted}\end{mdframed}}

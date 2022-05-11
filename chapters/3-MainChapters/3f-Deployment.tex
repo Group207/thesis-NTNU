@@ -1,0 +1,8 @@
+\section{Deployment}
+
+\subsection{Packaging and release}
+%
+
+Using the packaging system in Unreal. Project is exported and saved with exe and .pak files containing content. The whole folder can then be zipped and uploaded to a server. The zip can be downloaded and unzipped in a folder, and the game should work without further installation. When the game is updated it would need to be packaged again and re-downloaded with the current setup. This method is also what is currently in use at Lokførerskolen.
+
+One option to improve the update process is to create an auto-updater, and automatically patch the game with new updates. Doing this would most likely require more work than it is worth if the game is not updated often. In Unreal it is possible to use clustering in the pak files, which allows for easier streaming and patching of game data. 

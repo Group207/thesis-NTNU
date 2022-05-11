@@ -1,7 +1,80 @@
 \chapter{Introduction}
 
-Over the years, several thesis templates for \LaTeX{} have been developed by different groups at NTNU. Typically, there have been local templates for given study programmes, or different templates for the different study levels – bachelor, master, and \acrshort{phd}.\footnote{see, e.g., \url{https://github.com/COPCSE-NTNU/bachelor-thesis-NTNU} and \url{https://github.com/COPCSE-NTNU/master-theses-NTNU}}
+\section{Problem Area, Delimitation and Definition}
 
-Based on this experience, the \acrfull{CoPCSE}\footnote{\url{https://www.ntnu.no/wiki/display/copcse/Community+of+Practice+in+Computer+Science+Education+Home}} is hereby offering a template that should in principle be applicable for theses at all study levels. It is closely based on the standard \LaTeX{} \texttt{report} document class as well as previous thesis templates. Since the central regulations for thesis design have been relaxed – at least for some of the historical university colleges now part of NTNU – the template has been simlified and put closer to the default \LaTeX{} look and feel.
+\section{Target Audience}
+For both the report and the product
 
-The purpose of the present document is threefold. It should serve (i) as a description of the document class, (ii) as an example of how to use it, and (iii) as a thesis template.
+\section{Background}
+%What do we know, what we had to learn.
+
+The Norwegian Train Driver Academy, \textit{Lokførerskolen}, is a public vocational school part of The Norwegian Railway Directorate, educating locomotive drivers. As a part of their education they use \textit{DeskSim}, a self developed in-house train simulator. DeskSim is built upon \textit{jMonkeyEngine}, a Java-based game engine developed in 2003 that has recently become outdated in some areas. To avoid irrelevancy, Lokførerskolen started their long-term project of changing the game engine from \textit{jMonkeyEngine} into a more modern one.
+
+The project is a combination of two part. The first part is an analysis and comparison of different modern game engines. The second part is recreating features from DeskSim into the chosen game engine from the first part.
+
+\section{Analysis Goals}
+Look into what game engines are available and compare and analyze them against each other based on criteria given to us by Lokførerskolen: 
+\begin{itemize}
+    \item Must be a modern game engine
+    \item Must support functionality for virtual reality
+    \item Must be a modern engine
+    \item Must be capable of reproducing all functionality of DeskSim
+    \item The game engine should be easy to learn
+    \item The game engine should be able to reuse existing 3D assets from DeskSim
+\end{itemize}
+
+\section{Development Goals}
+The project will provide Lokførerskolen with our recommendation of game engine for their train simulator and develop a demo in our chosen engine that they can continue to build upon. 
+
+
+
+\subsection{Main Goals}
+We were given a list of various features they wanted us to implement in the demo, and we managed to develop all of the main features including all of the optional features as well.
+
+The main goal is to create a demo scenario with the following features:
+\begin{itemize}
+    \item Must include at least one train, two signals, one train-DMI, a train track and a simple landscape.
+    \item The train must be able to move using the controllers Loførerskolen uses today
+    \item The train must follow the railway realistically
+    \item Signals must be able to change colors based on specific events happening in game.
+\end{itemize}
+
+\subsection{Part Goals}
+\begin{itemize}
+    \item Create a tool for placing, editing and deleting 3D models in the game world, like trains, building or signals
+    \item Must be able to save the world when it is edited
+    \item Create a tool for creating, editing and deleting train tracks
+    \item Train tracks must be obtain curves and not only go in a straight line
+    \item Must be able to place a train on the tracks and drive it 
+\end{itemize}
+
+
+
+\section{Constraints}
+% About time, physical, practical, work methologies(scrum), technical, and organizational.
+Because we developed the application for Lokførerskolen, they had some imposed contraints and boundaries we had to follow. Any deviations from those had to be discussed and clarified first with the client.
+
+Since we didn't have any previous experience related to train operation, we were not responsible for that part in the project. Although Lokførerskolen did teach us the basics they were not a requirement set by them, and we were therefore only responsible for the development of the product.
+
+We were only supposed to develop a demonstration of how some of their functionalities from DeskSim would function in a different engine. As such we were not tasked to develop all of the functionalities in DeskSim into our own simulator, but only a few main features set by Lokførerskolen.
+
+
+
+
+\section{Roles}
+\textbf{Thomas Arinesalingam} was the \textit{Project Leader}. His role specific responsibilities were to ensure that all group members had equal right to express their thoughts. Be the project's "man of action", motivating the development. He ensured that all submissions were delivered on time. 
+
+\textbf{John Ole Bjerke} was the \textit{Research Manager}, overseeing all research and ensuring the level of obtained knowledge is adequate before the development starts.
+
+\textbf{Endre Heksum} was the \textit{Scrum Master} for the project and was responsible for the development of the product and took the role of sprint leader.
+
+\textbf{Henrik Markengbakken Karlsen} was the \textit{Writer of Minutes}, writing minutes from all meetings and making sure all team members logs both time and work log.
+
+\textbf{Tom Røise} was our supervisor during the project, and provided guidance and academic support to the group during the development process.
+
+\textbf{Isak Kvalvaag Torgersen} represented Lokførerskolen who was our client which we developed the train simulator for. 
+
+
+\section{The Report}
+% Organization, terminology, practical (layout, style and fonts etc...)
+% How is the report setup
