@@ -1,0 +1,132 @@
+\chapter{Testing}
+
+This chapter explains and elaborates the testing performed on the developed system. 
+
+\section{User Testing}
+
+In collaboration with the client, we set up user tests towards the end of development. We visited \Gls{lokforerskolen} in Oslo and borrowed three students who have previously used their current simulation software. The goal of user testing was to further iterate on the software based on given feedback, but we didn't have a lot of time as the testing was done two weeks prior to the deadline. The tests were done by prompting the user with a set of tasks. These were simple tasks, designed to test the user interface, software structure and overall user experience. The observer measured the time spent, while writing down notes from the user’s performance. The user was also prompted with questions about the experience. We also had a few tests with the client where we tested the editor mode which is only available to admins.
+
+\begin{table}[H]
+    \begin{tblr}{colspec={|X[.2, l]|X[.8, l]|}, hlines}
+        \textbf{Case 1:} & Start the scenario named "Testing" \\
+        \textbf{Preconditions:} & The software is launched \\
+        \textbf{Expected execution:} & The subject navigates to the correct tab, and clicks "Testing" \\
+        \textbf{Actual execution:} & 
+        The first two subjects started by navigating through the main menu tabs to search for "Testing", and clicked it once they saw it. The third subject clicked the correct tab as their first action, but the button did not respond, making the subject believe the scenario was not placed under this tab. This resulted in the subject launching the wrong scenario, making them exit the application to try again. \\
+        
+        \textbf{Results:} & The subjects complimented the look and feel of the interface. In a later discussion, they all agreed when one of the subjects said the interface was more user friendly than the existing simulator. \\
+    \end{tblr}
+    \caption{User Test Case 1: Start the scenario named "Testing"}
+\end{table}
+
+\begin{table}[H]
+    \begin{tblr}{colspec={|X[.2, l]|X[.8, l]|}, hlines}
+        \textbf{Case 2:} & Drive the train \\
+        \textbf{Preconditions:} & The subject is familiar with the controls from the existing simulator \\
+        \textbf{Expected execution:} & The subject accelerates the train, riding through the whole map \\
+        \textbf{Actual execution:} & The subjects, being used to the old simulator, quickly resorted to the controls they were used to, and continued to operate the train.\\
+        
+        \textbf{Results:} & This case was less structured and more focused on the general feedback from the subjects. We gave them freedom to explore the simulator while asking for their impressions.  \\
+    \end{tblr}
+    \caption{User Test Case 2: Drive the train}
+\end{table}
+
+\begin{table}[H]
+    \begin{tblr}{colspec={|X[.2, l]|X[.8, l]|}, hlines}
+        \textbf{Case 3:} & Exit the game \\
+        \textbf{Preconditions:} & The subject has started a scenario \\
+        \textbf{Expected execution:} & The subject presses the "escape"-button, then navigates to the main menu before exiting the game \\
+        \textbf{Actual execution:} & All subjects started by pressing the escape key, then clicking "main menu", and "exit". \\
+        
+        \textbf{Results:} & This went smoothly, as if all subjects had done it before. We received compliments for the simplicity of the menu navigation, and praise for designing it in such a way that there is no need to exit the application when starting another scenario. \\
+    \end{tblr}
+    \caption{User Test Case 3: Exit the game}
+\end{table}
+
+\begin{table}[H]
+    \begin{tblr}{colspec={|X[.2, l]|X[.8, l]|}, hlines}
+        \textbf{Case 4:} & Place and edit objects \\
+        \textbf{Preconditions:} & The subject has admin privileges and can open editor mode \\
+        \textbf{Expected execution:} & The subject places an item from the editor menu and moves it \\
+        \textbf{Actual execution:} & 
+        The subject tried to drag and drop an item from the editor menu but nothing happened. After a while they clicked the item first  then dragged it and it got placed in the level. They then moved the item in the level with some issues were the program stopped moving the item and they had to re select the object again. \\
+        
+        \textbf{Results:} & The subject managed to navigate the editor menu without issue, but struggled with placing and moving the object.  \\
+    \end{tblr}
+    \caption{User Test Case 4: Place and edit objects}
+\end{table}
+
+\begin{table}[H]
+    \begin{tblr}{colspec={|X[.2, l]|X[.8, l]|}, hlines}
+        \textbf{Case 5:} & Save, exit and load level \\
+        \textbf{Preconditions:} & The subject have opened editor mode and placed an item in the level \\
+        \textbf{Expected execution:} & The subject clicks save, then main menu twice and opens the "Testing" level \\
+        \textbf{Actual execution:} & 
+        The subject finds and clicks save, then clicks main menu and clicks on the warning. They then wait a bit before trying to click main menu again, which returns them to the main menu. Then they open the "Testing" level and sees the changes made.\\
+        
+        \textbf{Results:} & The subject...  \\
+    \end{tblr}
+    \caption{User Test Case 5: Save, exit and load level}
+\end{table}
+\todo{results her}
+
+
+\section{Hardware testing}
+% Testing on the hardware the computers at lokførerskolen.
+During the visit to Lokførerskolen, we were able to deploy a build of the simulator on the client's hardware. These tests were conducted by confirming or disproving whether the operational requirements (\ref{OperationalRequirements}) could be fulfilled. We acquired a Windows computer, and successfully ran the simulator with over 60 frames per second. 
+
+% How to perform the tests.
+
+% Case: Starte TestLevel. kjøre gjennom levelet og fortelle om brukeropplevelsen.
+
+%Forklaring:
+%Du har en DMI, viser kun fart og signaler vises kun som fysiske signaler i terrenget.
+
+% Case: Obsewrvasjon: Gi oppgaver og se tidsbruk, forståelse og brukeropplevelse.
+
+% Case 1: Start "Test Level Scenarioet"
+%Tidsbruk:
+% Beskrivelse: Beskrive hvorfor brukeren ikke klarte oppgaven/brukte lang tid.
+
+
+% Få toget opp i 80 kmt ved bruk av spakene. 
+% Beskrivelse:
+
+% Følge med, Halv fart
+
+% Følge med, Stoppe før stopp signal.
+
+% Naviger tilbake til hovedmenyen
+
+
+\section{System Testing} % Henrik 
+% Sammenheng med use case - 
+
+\textbf{System test 02.05.2022} \\
+To ensure the quality and resilience of our system some basic tests were performed on the system functionality. Thees tests were performed in accordance to the use cases conformed for the simulator. \\
+
+\textbf{Use case 1: Log in}
+
+
+
+The first test was performed on the entire simulator system which includes all functionality exept the editor mode. When changing the screen resolution and window mode, the application did not perform any actions suggesting that our implementation was wrong. After reviewing our code and searching for the issue online we found the origin of the problem. We did not actually apply the settings we want to change.
+
+\begin{code}
+	GEngine->GameUserSettings->ApplyResolutionSettings(false);
+\end{code}
+
+The fix to the problem was to call the text block above after changing the resolution settings.
+
+When entering the pause menu from the simulator we found that pressing the p-button did not remove the pause menu which it should. This is not a bug but it just needed to be implemented. \\
+
+The switch to drone mode did not work and after reviewing the code it was found that the key binding in the code did notmatch the specified key binding in the engine. We had to change the name of the key binding in train.cpp to get it to work. \\
+
+The drone camera did not spawn in the right place. Our implementation should spawn the drone camera over the train looking in its forward direction but it seemed to be spawning where it was placed out. This was woking in the MVP so after a review of the code we found out that the reference handling of the train from the drone had changed since the MVP. The solution was to add a function which loops over all train actors in a scene and uses the first train it finds to place the drone. The previous solution had the train as a UPROPERTY, but this implementation would not work if the train as deleted and added again.
+\todo{Form thees correct}
+
+\textbf{System test 02.05.2022} \\
+We performed some tests on the editor mode ...
+
+
+% Testing with Client - John Ole 
+

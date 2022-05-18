@@ -1,0 +1,77 @@
+\chapter{Discussion}
+
+This chapter will discuss and reflect on the planning, development and administration of the project, as well as the product.
+
+%Use of aliases? Gamemodes etc...
+
+%Sum up tall the goals and to what degree they got achieved. Thees includes learning goals (dev and process), effect goals, resultgoals...
+
+%A section about alternatives, options and choices we made. 
+
+%Maybe a section summing up our experience with unreal as the choice of engine, are the expectations met, why, why not. A critical view on the game engine analysis.
+% -------------------------------------%
+            %Project Plan and Process
+%---------------------------------------%
+
+%---------------------------------------%
+        %THE GAME ENGINE ANALYSIS
+%---------------------------------------%
+\section{Game Engine Analysis}
+The goal of the game engine analysis was meant to help \Gls{lokforerskolen} transition between engines smoother by analysing the transferability, reusability and learning curve of different engines. 
+
+In this part the findings of the game engine analysis will be discussed in comparison with the actual process and development done.
+
+The game engine analysis concluded that the initial goal of assets being reusable in the selected engine was met when choosing unreal engine...
+
+The 
+
+%--------------------------------------%
+
+%---------------------------------------%
+        %VERSION CONTROLL SYSTEM
+%---------------------------------------%
+\section{Version Control System}
+Version control or source control, is the practice of tracking and managing changes to software code often within a development team\cite{what_is_version_control}.
+
+Before we started developing we had to chose what version control system we would use. On one side we have Perforce, often a standard choice for larger studios and is favored within game development due to its handling of large binary files. On the other side we have Git a standard choice for developers all around due to its many features for teams and how it supports multiple branches which helps with cooperation within a team. The biggest structural difference is that Perforce uses a centralized model unlike Git which uses a distributed decentralized model. Deploying a Perforce server is also necessary before you can use it, unlike Git which is ready to be used from a cloud service such as Github or Azure DevOps. 
+Throughout our bachelor program we have used Git as a version control system and collaborative tool to help us keep the code base consistent and maintained, and is one of the reasons for using it in this project as well. Git can also be hosted on the cloud through for example Github, which we also used in this project. Although Perforce would probably be a better choice for bigger projects and teams since it can handle bigger files more efficiently\cite{different_version_control_used_in_gamedev}.
+
+The biggest issue we faced with Git was its single file size limit of 100MB, since Unreal Engine projects contain bigger files such as 3D models, textures and maps. We had a few instances were a map file containing the level scene were bigger than git`s allowed file size limit. As a fix we used the level layer tool in Unreal Engine to split the level file into multiple smaller map files. This temporary fixed the issue and we were no longer hitting the max file size limit of git, although this also made it possible for us to edit and work on the same level without having to overwrite each others changes, since we could just work on different level layers. This is due to the maps being binary files which git cant merge. You either have to pick the current one or the incoming file when merging, unlike cpp files which can be edited by multiple people and can be properly merged together after. 
+
+We also tried using git LFS at the beginning, although \Gls{github} only provides a LFS storage capacity and bandwidth at 1GB which we quickly used up in one single commit. 
+
+Git has many cloud hosting services were you can create repositories in the cloud, such as \Gls{github}, GitLab, Bitbucket or Azure DevOps.
+
+%---------------------------------------%
+        %CRITIQUE
+%---------------------------------------%
+\section{Critique of Thesis}
+Review of the bachelor, what are the effect this bachelor has in the world. How valid and important are the work we have done. If yes why, if no why not.
+
+The application has not have any profiling 
+% 
+
+
+
+\section{Further work}
+A section on how the product hold up to standards, if it should and can be used further, to what degree.
+% 
+
+% demo as a whole, individual features to use and develop further,
+% See User/client testing on what we could improve if we had more time
+
+% paper to be used as a basis/reference for further work, product to be used by lokførerskolen
+
+
+
+\section{Group work}
+How did we approach the thesis, progress in the beginning and general.
+
+The organizational aspect, how did we work and when. What did we log, how did we log where can the readers find this documentation
+
+The separation of duties. How was work assigned, and how was the general work load balancing within the group. 
+
+How was it to work in the group,m good and bad experiences.
+
+
+% 

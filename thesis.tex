@@ -1,39 +1,71 @@
 \documentclass[british,titlepage]{ntnuthesis}
 
-\title{An NTNU Thesis \LaTeX{} Document Class}
-\shorttitle{An NTNU Thesis Document Class}
-\author{Community of Practice in Computer Science Education at NTNU}
-\shortauthor{CoPCSE$@$NTNU}
+\title{DeskSim v2}
+\shorttitle{DeskSim v2: Prototyping Train Simulation}
+\author{Thomas Arinesalingam, John Ole Bjerke, Endre Heksum, Henrik Markengbakken Karlsen}
+\shortauthor{Arinesalingam, Bjerke, Heksum, Karlsen}
 \date{CC-BY \ntnuthesisdate}
 
 \addbibresource{thesis.bib}
 
 \input{glossary.tex} % add glossary and acronym lists before document
 
+\setcounter{tocdepth}{1} % Set the level of table-of-contents to sections
+
 \begin{document}
 
+\input{chapters/0a-preface}
+\newpage
+
 \input{chapters/0a-abstract.tex}
+\newpage
+
 \input{chapters/0b-sammendrag.tex}
+\newpage
 
 \tableofcontents
+\newpage
+
 \listoffigures
+\newpage
+
 \listoftables
+\newpage
+
 \lstlistoflistings
+\newpage
+
+
+%\input{chapters/0c-acronyms.tex}
+%\newpage
+
+%\input{chapters/0d-glossary.tex}
+%\newpage
 
 \printglossary[type=\acronymtype] % Print acronyms
+\newpage
 \printglossary                    % Print glossary
+\newpage
 
-\input{chapters/1-introduction}
-\input{chapters/2-usage.tex}
-\input{chapters/3-structure.tex}
-\input{chapters/4-conclusion.tex}
+\input{chapters/1-introduction} \newpage
+\input{chapters/2-GameEngineAnalysis} \newpage
+\input{chapters/3-Requirements} \newpage
+\input{chapters/4-DevelopmentProcess} \newpage
+\input{chapters/5-TechnicalDesign} \newpage
+\input{chapters/6-DeskSimV2} \newpage
+\input{chapters/7-Implementation} \newpage
+\input{chapters/8-Deployment} \newpage
+\input{chapters/9-Testing} \newpage
+\input{chapters/10-Discussion} \newpage
+\input{chapters/11-Conclusion}
+
 
 \chapter*{\bibname}
 \printbibliography[heading=none]
 
-\input{chapters/papers.tex}
+%\input{chapters/papers.tex}
 
-\appendix
-\input{appendices/a-appendix.tex}
+%\appendix
+%\input{appendices/a-appendix.tex}
 
 \end{document}

@@ -1,0 +1,23 @@
+\chapter{Deployment}
+
+This chapter will detail how the software can be deployed, both for development and release as a packaged product. It will also present how one may compile the code to create and deploy documentation. 
+
+\section{Packaging and release}
+
+Unreal Engine comes with a built-in \gls{packaging} system. The system compiles source code, cooks content and builds the game. The game is then packaged as an executable file and game data is stored in \verb|.pak|-files. The entire folder can be compressed and uploaded to a server where users can download the file, extract the file and play the game without any further installation. This is the simplest solution for deploying the finished product, but requires re-downloading the entire software when updates are packaged and released. A similar system is already in use at \Gls{lokforerskolen}, where the software is downloaded in its entirety and updates requires a complete re-download. Due to its simplicity we will use this solution, however there are more advanced options in \Gls{unrealengine} if a better updating system is required. 
+
+One option to improve the update process is to create an auto-updater and automatically patch the game with new updates. Doing this would most likely require more work than it is worth if the game is not updated often. In Unreal it is possible to use clustering in the \verb|.pak| files, which allows for easier streaming and patching of game data. 
+
+\section{Setting up the project}
+
+The project uses Unreal Engine 4.27. The engine can be installed on the Epic Games Launcher, which is also used as a hub for various features related to Unreal. After the engine is installed, it can be used to open any Unreal Engine 4 project. 
+
+Each Unreal project consists of some standard files and folders, most notably the \verb|.uproject|-file which contains some general info about the project, like engine version, code modules, and plugins used. User-made \cpp code needs to be compiled before the editor can start, which is done by generating a \Gls{visualstudio} \gls{solution} for the project. \Gls{visualstudio} is the default \acrshort{ide} to use with Unreal, but other options are available. After the project is compiled for the first time, additional changes made during development can be compiled in the Unreal Editor, which hot-reloads the changed files. 
+
+Plugins used can be installed in two ways. The first and easiest method is to get the plugin via Unreal Engine's marketplace for assets and install it to an engine. The second method requires some more work, but installs the plugin in the project itself, allowing it to be shared between team members. This is a good way to share paid plugins within a project, Some manual work is required to set this up, mainly involving copying either compiled or source files to the proper directory in the project and adding files to source control to allow sharing. 
+
+There are three main directories shared in an Unreal Project, namely \verb|Source| which contains all the \cpp code written for the project, \verb|Content| which contains all assets like materials, models and blueprints, and \verb|Config| which contains extra configuration files used in various places. A \verb|Plugin| folder is also needed if any plugins are shared in the project. These are the essential folders to track using source control. During startup and use other intermediate folders are created, such as \verb|Build|, \verb|Binaries|, and \verb|Intermediate|. These intermediate folders are automatically generated, and normally should not be included in source control.
+
+\section{Deployment of documentation}
+
+During the development we have used \Gls{doxygen} for documenting code. It lets us compile the source folder into generated HTML files with a formatted documentation of all comments. The resulting webpage is self-contained and features links between related classes and functions. We generated this using \textit{Doxywizard}, which offers a graphical user interface for \Gls{doxygen}. To regenerate this documentation, run Doxygen with \verb|/Source/DeskSimV2| as the source code folder input. The program assumes all code to be commented using the \Gls{doxygen} standard. \footnote{Doxygen Manual, \url{https://www.doxygen.nl/manual/docblocks.html}}

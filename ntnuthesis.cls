@@ -279,6 +279,10 @@
     commentstyle=\color{thesisgreen},
     identifierstyle=\color{black},
     numberstyle=\fontsize{7}{8}\selectfont,
+    numbers=left,
+    breaklines,
+    tabsize=4,
+    captionpos=b,
     literate=
         {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
         {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
@@ -321,3 +325,40 @@
        \@starttoc{lol}%
        \endgroup%
        }%
+
+
+% Remove Indentation !!!
+\usepackage{parskip}
+
+% Figure Placement
+\usepackage{float}
+
+% tblr tables
+\usepackage{tabularray}
+
+% Wrap table
+\usepackage{wrapfig}    % Wrap text around images
+
+
+% Code Environment ----------------------------------------------------------------
+\RequirePackage{minted} % Includes several programming languages and styles
+\RequirePackage{mdframed}
+\usemintedstyle{vs}
+\setminted{fontsize=\footnotesize}
+\RequirePackage{environ}
+
+\newenvironment{code}
+{\VerbatimEnvironment
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!10,]
+\begin{minted}[linenos,tabsize=4,breaklines]{c++}}
+{\end{minted}\end{mdframed}}
+
+
+\newcommand{\cpp}{C\texttt{++} }
+%-----------------------------------------------------------------------------------
+
+% Custom todo command
+\newcommand{\todo}[1]{{\color{red}{\textbf{TODO}\hspace{10mm}#1}}}
+
+\renewcommand{\cleardoublepage}{}
+\renewcommand{\clearpage}{}
